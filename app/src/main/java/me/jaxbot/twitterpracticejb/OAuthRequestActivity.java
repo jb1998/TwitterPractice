@@ -29,7 +29,7 @@ public class OAuthRequestActivity extends AppCompatActivity {
                 public void success(Result<SettingUser> result) {
                     retrofit2.Response response = result.response;
                     SettingUser user= (SettingUser) response.body();
-                    Log.d("mmm", user.getText());
+                    Log.d("mmm", user.gettext());
 //                    Log.d("lala",user.getDiscoverable_by_email()+user.getScreen_name());
                 }
 

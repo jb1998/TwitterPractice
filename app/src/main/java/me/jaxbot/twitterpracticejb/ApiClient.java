@@ -23,7 +23,7 @@ public class ApiClient {
         else
         {
             Retrofit retrofit = new Retrofit.Builder().baseUrl(" https://api.twitter.com/1.1/")
-//            Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.twitter.com/1.1/statuses/user_timeline.json")
+
 
 
                     .addConverterFactory(GsonConverterFactory.create(gson)).client(new OkHttpClient())

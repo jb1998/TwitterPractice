@@ -9,11 +9,11 @@ public class SettingUser {
     String language;
     String discoverable_by_email;
     String text;
-    public String getText() {
+    public String gettext() {
         return text;
     }
 
-    public void setText(String text) {
+    public void settext(String text) {
         this.text = text;
     }
 
