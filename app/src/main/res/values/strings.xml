@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TwitterPractice(jb)</string>
+    <string name="twitter_consumer_key">DneYP2Fb0Hdlbks1wgRIKFcWS</string>
+    <string name="twitter_consumer_secret">6qNeepcE3doRCvJl4ti9ezaHxpKBGGy04OyQUJdAWiISGEwTH8</string>
+    <string name="title_activity_main_screen">MainScreen</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>
