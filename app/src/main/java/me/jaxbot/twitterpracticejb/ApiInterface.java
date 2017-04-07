@@ -1,5 +1,7 @@
 package me.jaxbot.twitterpracticejb;
 
+import java.util.ArrayList;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
@@ -11,5 +13,7 @@ import retrofit2.http.Header;
 public interface ApiInterface {
 
     @GET("statuses/user_timeline.json")
-    Call<SettingUser> showsettings(@Header("Authorization") String header);
+
+//    @GET("account/settings.json")
+    Call<ArrayList<SettingUser>> showsettings(@Header("Authorization") String header);
 }

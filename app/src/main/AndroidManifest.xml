@@ -17,18 +17,23 @@
             android:name="io.fabric.ApiKey"
             android:value="3bad66e857e94c7f4dfb4bcd38f406fc035cd33e" />
 
-        <activity android:name=".OAuthRequestActivity">
+        <activity android:name=".OAuthRequestActivity" />
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
         <activity
             android:name=".MainScreen"
             android:label="@string/title_activity_main_screen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailedTweet"
+            android:label="@string/title_activity_detailed_tweet"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>

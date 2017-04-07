@@ -20,7 +20,7 @@ import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
 import io.fabric.sdk.android.Fabric;
 
-public class MainActivity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
     private static final String TWITTER_KEY = "DneYP2Fb0Hdlbks1wgRIKFcWS";
     private static final String TWITTER_SECRET = "6qNeepcE3doRCvJl4ti9ezaHxpKBGGy04OyQUJdAWiISGEwTH8";
     private TwitterLoginButton loginButton;
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
 
 
         loginButton = (TwitterLoginButton) findViewById(R.id.login_button);
@@ -49,12 +50,15 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void success(Result<String> result) {
                         Log.d("TAG",result.data);
-                        Toast.makeText(MainActivity.this, result.data, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(Login.this, result.data, Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent();
+                        i.setClass(Login.this,TestActivity.class);
+                        startActivity(i);
                     }
 
                     @Override
                     public void failure(TwitterException exception) {
-                        Toast.makeText(MainActivity.this, exception.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, exception.toString(), Toast.LENGTH_SHORT).show();
 
                     }
                 });
