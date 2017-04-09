@@ -17,7 +17,6 @@
             android:name="io.fabric.ApiKey"
             android:value="3bad66e857e94c7f4dfb4bcd38f406fc035cd33e" />
 
-        <activity android:name=".OAuthRequestActivity" />
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +32,11 @@
             android:name=".DetailedTweet"
             android:label="@string/title_activity_detailed_tweet"
             android:theme="@style/AppTheme" />
-        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".TestActivity" />
+        <activity
+            android:name=".UserAccount"
+            android:label="@string/title_activity_user_account"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
