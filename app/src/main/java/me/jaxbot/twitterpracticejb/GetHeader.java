@@ -27,7 +27,7 @@ public class GetHeader {
 
                 .setOauth_nonce(randomString())//should be a random string everytime
                 .setOauth_timestamp(System.currentTimeMillis()/1000+"") //current epoch time
-                .setBody(bodymap) //set to null if there is no request body
+                .setBody(null) //set to null if there is no request body
                 .setQuery(querymap)
                 .setBaseurl(URL)
                 .setMethod(method)

@@ -6,17 +6,15 @@ import java.util.ArrayList;
  * Created by pc on 4/8/2017.
  */
 
-public class TimelineResponseClass {
+public class UserTimelineResponseClass {
     String created_at;
     String text;
     int favorite_count;// these are likes to a post
 
     //these are in user so make class
-    ArrayList<media> med;
 
-    public ArrayList<media> getMed() {
-        return med;
-    }
+     user user;
+     entities entities;
 
     public String getCreated_at() {
         return created_at;
@@ -42,10 +40,20 @@ public class TimelineResponseClass {
         this.favorite_count = favorite_count;
     }
 
-    public void setMed(ArrayList<media> med) {
-        this.med = med;
-    }
 
+    class entities
+    {
+
+        ArrayList<media> media;
+        public ArrayList<media> getMed() {
+            return media;
+        }
+
+        public void setMed(ArrayList<media> media) {
+            this.media = media;
+        }
+
+    }
 
     class media
     {
@@ -73,6 +81,9 @@ public class TimelineResponseClass {
     class user
     {
 
+        String name;
+        String profile_image_url;
+
         public String getName() {
             return name;
         }
@@ -89,7 +100,5 @@ public class TimelineResponseClass {
             this.profile_image_url = profile_image_url;
         }
 
-        String name;
-        String profile_image_url;
     }
 }

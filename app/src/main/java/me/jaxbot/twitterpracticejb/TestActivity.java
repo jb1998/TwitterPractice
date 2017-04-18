@@ -7,20 +7,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class TestActivity extends FragmentActivity implements TweetsFragment.ItemClickListener {
+public class TestActivity extends FragmentActivity
+{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        TweetsFragment fragmentOne;
-        fragmentOne = (TweetsFragment) getSupportFragmentManager().findFragmentById(R.id.myfragment);
-        fragmentOne.setItemClickListener(this);
-    }
-
-    @Override
-    public void onUserItemClicked(SettingUser user) {
-        Toast.makeText(TestActivity.this,"finally over",Toast.LENGTH_SHORT).show();
+        UserAccountFragment fragmentOne = new UserAccountFragment();
+        fragmentOne = (UserAccountFragment) getSupportFragmentManager().findFragmentById(R.id.activity_test);
 
     }
+
+
+
 }

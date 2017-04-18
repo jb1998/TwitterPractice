@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
+import retrofit2.http.Query;
 
 /**
  * Created by pc on 4/3/2017.
@@ -12,8 +13,9 @@ import retrofit2.http.Header;
 
 public interface ApiInterface {
 
-    @GET("statuses/user_timeline.json")
-
+//    @GET("statuses/user_timeline.json")
+            @GET("users/show.json")
+            Call<UserAccountClass> showuser(@Header("Authorization") String header, @Query("screen_name")String screen_name);
 //    @GET("account/settings.json")
-    Call<ArrayList<SettingUser>> showsettings(@Header("Authorization") String header);
+//    Call<ArrayList<UserTimelineResponseClass>> showsettings(@Header("Authorization") String header);
 }
