@@ -49,10 +49,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.name.setText(mtimeline.get(position).user.name);
         holder.tweet.setText(mtimeline.get(position).text);
         Picasso.with(mContext).load(mtimeline.get(position).user.profile_image_url).into(holder.imageView1);
-       String str= mtimeline.get(position).entities.media.get(0).getMedia_url();
-        Picasso.with(mContext).load(str).into(holder.imageView2);
+//       String str= mtimeline.get(position).entities.media.get(0).getMedia_url();
+  //      Picasso.with(mContext).load(str).into(holder.imageView2);
 
-        Log.d("mmm",mtimeline.get(position).created_at+" "+mtimeline.get(position).created_at);
+    //    Log.d("mmm",mtimeline.get(position).created_at+" "+mtimeline.get(position).created_at);
 
     }
 

@@ -50,7 +50,7 @@ public class TweetsFragment extends Fragment {
 
         myAdapter=new MyAdapter(getActivity(),user);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        myAdapter = new ArrayAdapter<String>(getActivity(), user);
+        myAdapter = new MyAdapter(getActivity(), user);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 //        listView.setAdapter(myAdapter);
@@ -77,19 +77,21 @@ public class TweetsFragment extends Fragment {
                 @Override
                 public void success(Result<ArrayList<UserTimelineResponseClass>> result) {
                     retrofit2.Response response = result.response;
-                    SettingUser user= (SettingUser) response.body();
+//                    SettingUser user= (SettingUser) response.body();
                     ArrayList<UserTimelineResponseClass> array2 = (ArrayList<UserTimelineResponseClass>) response.body();
                     if (array2 != null) {
                         user.clear();
+
                         user.addAll(array2);
                         for (int i = 0; i < user.size(); i++) {
-                            Log.d("mmm", "main fragment one - "+user.get(i).created_at);
-                            tweet.add(user.get(i).gettext());
-                            Log.d("mmm", user.get(i).gettext());
+//                            Log.d("mmm", "main fragment one - "+user.get(i).created_at);
+//                            tweet.add(user.get(i).gettext());
+//                            user.add();
+//                            Log.d("mmm", user.get(i).gettext());
                         }
 
                         myAdapter.notifyDataSetChanged();
-                    Log.d("fetched",user.getDiscoverable_by_email()+" "+user.getScreen_name());
+//                    Log.d("fetched",user.getDiscoverable_by_email()+" "+user.getScreen_name());
                     }
 
                 }
