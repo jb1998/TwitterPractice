@@ -49,6 +49,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.name.setText(mtimeline.get(position).user.name);
         holder.tweet.setText(mtimeline.get(position).text);
         Picasso.with(mContext).load(mtimeline.get(position).user.profile_image_url).into(holder.imageView1);
+
 //       String str= mtimeline.get(position).entities.media.get(0).getMedia_url();
   //      Picasso.with(mContext).load(str).into(holder.imageView2);
 
@@ -73,7 +74,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             time=(TextView) itemView.findViewById(R.id.timeTextView);
             tweet=(TextView)itemView.findViewById(R.id.tweet);
             name=(TextView)itemView.findViewById(R.id.username);
-
+            imageView2.setVisibility(View.INVISIBLE);
         }
     }
 }
