@@ -59,12 +59,15 @@ public class UserAccountFragment extends Fragment {
         showsettings.enqueue(new retrofit2.Callback<UserAccountClass>() {
             @Override
             public void onResponse(Call<UserAccountClass> call, Response<UserAccountClass> response) {
-                createdat.setText(response.body().created_at);
-                name.setText(response.body().name);
+
+                Log.i("null", response.body()+"");
+//                createdat.setText(response.body().created_at);
+//                name.setText(response.body().name);
             }
 
             @Override
             public void onFailure(Call<UserAccountClass> call, Throwable t) {
+                Log.d("pppp", "onFailure: ");
 
             }
         });

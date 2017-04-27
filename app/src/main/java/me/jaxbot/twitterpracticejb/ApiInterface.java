@@ -13,9 +13,9 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
 
-//    @GET("statuses/user_timeline.json")
-            @GET("users/show.json")
-            Call<UserAccountClass> showuser(@Header("Authorization") String header, @Query("screen_name")String screen_name);
+    @GET("statuses/user_timeline.json")
+//            @GET("users/show.json")
+//            Call<UserAccountClass> showuser(@Header("Authorization") String header, @Query("screen_name")String screen_name);
 //    @GET("account/settings.json")
-//    Call<ArrayList<UserTimelineResponseClass>> showsettings(@Header("Authorization") String header);
+    Call<ArrayList<UserTimelineResponseClass>> showsettings(@Header("Authorization") String header);
 }

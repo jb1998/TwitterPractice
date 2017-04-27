@@ -15,8 +15,8 @@ public class TestActivity extends FragmentActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        UserAccountFragment fragmentOne = new UserAccountFragment();
-        fragmentOne = (UserAccountFragment) getSupportFragmentManager().findFragmentById(R.id.activity_test);
+//        UserAccountFragment fragmentOne = new UserAccountFragment();
+//        fragmentOne = (UserAccountFragment) getSupportFragmentManager().findFragmentById(R.id.activity_test);
 
     }
 
