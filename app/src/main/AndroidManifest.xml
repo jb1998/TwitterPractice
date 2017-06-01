@@ -18,11 +18,7 @@
             android:value="3bad66e857e94c7f4dfb4bcd38f406fc035cd33e" />
 
         <activity android:name=".Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainScreen"
@@ -36,7 +32,17 @@
         <activity
             android:name=".UserAccount"
             android:label="@string/title_activity_user_account"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainPage"
+            android:label="@string/title_activity_main_page"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
